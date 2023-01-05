@@ -2,8 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: gateway-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
@@ -27,5 +25,19 @@ spec:
         backend:
           service: 
            name: hello-java
+           port:
+              number: 8080
+      - path:  /hello-java-v1
+        pathType: Prefix
+        backend:
+          service: 
+           name: hello-java-v1
+           port:
+              number: 8080
+      - path:  /hello-java-v2
+        pathType: Prefix
+        backend:
+          service: 
+           name: hello-java-v2
            port:
               number: 8080
