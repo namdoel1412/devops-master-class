@@ -15,7 +15,7 @@ spec:
           service:
             name: hello-java
             port:
-              number: 8000
+              number: 8080
       - path: /currency-exchange/
         pathType: Prefix
         backend:
