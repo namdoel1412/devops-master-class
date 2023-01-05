@@ -22,3 +22,10 @@ spec:
            name: currency-conversion
            port:
               number: 8100
+      - path:  /hello-java
+        pathType: Prefix
+        backend:
+          service: 
+           name: hello-java
+           port:
+              number: 8080
