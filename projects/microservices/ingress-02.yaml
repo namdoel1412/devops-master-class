@@ -37,3 +37,4 @@ spec:
             name: hello-java
             port:
               number: 8080
+  ingressClassName: nginx
