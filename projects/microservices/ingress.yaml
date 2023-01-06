@@ -8,13 +8,6 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: hello-java
-            port:
-              number: 8080
       - path: /currency-exchange/
         pathType: Prefix
         backend:
